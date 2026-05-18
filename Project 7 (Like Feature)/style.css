@@ -1,0 +1,39 @@
+html, body {
+    height:100%;
+    width:100%;
+}
+
+#container {
+    height: 400px;
+    width: 300px;
+    background-color:white;
+    border:2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body {
+    background-color:lightseagreen;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+#container img{
+    height:100% ;
+    width : 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#container i {
+    color :white;
+    font-size: 70px;
+    position: absolute;
+    top:48%;
+    left :49%;
+    transform: translate(-50%, -50%) ,scale(0);
+    opacity:0;
+    transition: ease 0.5s;
+}
