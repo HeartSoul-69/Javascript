@@ -21,4 +21,4 @@ document.querySelector(".start").addEventListener("click", function () {
 document.querySelector(".stop").addEventListener("click" , function () {
     clearInterval(IntervalID)
     IntervalID = null
-})
+})``````````
