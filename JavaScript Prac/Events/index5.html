@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color:aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="img1" src="https://picsum.photos/600/400?random=1&utm_source=chatgpt.com" alt="Photoshop"></li>
+
+            <li><img width="200px" id="img2" src="https://picsum.photos/600/400?random=2&utm_source=chatgpt.com" alt=""></li>
+
+            <li><img width="200px" id="img3" src="https://picsum.photos/600/400?random=3&utm_source=chatgpt.com" alt=""></li>
+
+            <li><img width="200px" id="img4" src="https://picsum.photos/600/400?random=4&utm_source=chatgpt.com" alt=""></li>
+
+            <li><img width="200px" id="img5" src="https://picsum.photos/600/400?random=5&utm_source=chatgpt.com" alt=""></li>
+            <li><a style="color:aliceblue"  href="https://google.com" id="google">Google</a></li>
+            
+        </ul>
+    </div>
+    <script>
+        //events => type,defaultPrevented, timestamp, target , toElement , srcElement ,currTarget
+        //interview perspective => clientX , clientY , screenX , screenY
+        //for keyboard => altkey , ctrlkey , shiftkey , keyCode
+
+        //propogation => bubbling 
+        // document.getElementById("images").addEventListener("click" , function(e){
+        //     console.log("image is  clicked")
+        // },false)
+
+        // document.getElementById("img3").addEventListener("click" , function(e){
+        //     console.log("dog image is  clicked")
+        //     e.stopPropagation()
+        // },false)
+
+        // document.getElementById("google").addEventListener("click" , function(e){
+        //     console.log("google is  clicked")
+        //     e.preventDefault()
+        // },false)
+
+
+        const image = document.querySelector("#images")
+        image.addEventListener ("click" , function (e) {
+            console.log("e.target.parentNode")
+            if(e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+          
+            }
+           
+        },false)
+
+ // removeIt.parentNode.removeChild(removeIt)
+
+    </script>
+</body>
+</html>
